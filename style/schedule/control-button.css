@@ -23,3 +23,9 @@ border-right:  5px solid #FFFAFA;
     background-color: #999999;
     cursor:  not-allowed;
 }
+
+@media screen and (max-width: 800px){
+    .control-button{
+        margin-bottom: 45px;
+    }
+}

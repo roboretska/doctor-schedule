@@ -2,6 +2,7 @@ function checkboxCheking(event) {
     let timePicker1 = document.getElementById('timepicker');
     let timePicker2 = document.getElementById('timepicker1');
     let addTimePicker = document.getElementsByClassName('icon-plus')[0].parentNode;
+    let warningAlert=document.getElementsByClassName("disable-alert")[0];
 
 
     if (event.currentTarget.checked === true) {
@@ -14,10 +15,15 @@ function checkboxCheking(event) {
         while (otherTimePicker.firstChild) {
             otherTimePicker.removeChild(otherTimePicker.firstChild);
         }
+        warningAlert.style.display = "block";
+
+
     }else {
+        warningAlert.style.display = "none";
         timePicker1.removeAttribute('disabled');
         timePicker2.removeAttribute('disabled');
         addTimePicker.setAttribute('onclick', 'insertTimePicker()');
         addTimePicker.removeAttribute('disabled');
     }
 }
+

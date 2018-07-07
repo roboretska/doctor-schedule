@@ -28,3 +28,7 @@ input[type= "checkbox"]{
     height: 25px;
     width: 25px;
 }
+.timepicker-header{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}

@@ -68,32 +68,56 @@
             <div id="daytime" class="tab-content">
                 <h3>Choose weekday and consultation hours at daytime(8.00AM - 8.00PM)</h3>
                 <div class="weekday-picker">
+                    <input type="radio" name="weekday" id="mon-min">
+                    <label for="mon-min">Monday</label>
+
+                    <input type="radio" name="weekday" id="tue-min">
+                    <label for="tue-min">Tuesday</label>
+
+                    <input type="radio" name="weekday" id="wed-min">
+                    <label for="wed-min">Wednesday</label>
+
+
+                    <input type="radio" name="weekday" id="thu-min">
+                    <label for="thu-min">Thursday</label>
+
+
+                    <input type="radio" name="weekday" id="fri-min">
+                    <label for="fri-min">Friday</label>
+
+
+                    <input type="radio" name="weekday" id="sat-min">
+                    <label for="sat-min">Saturday</label>
+
+
+                    <input type="radio" name="weekday" id="sun-min">
+                    <label for="sun-min">Sunday</label>
+
+                </div>
+                <div class="weekday-picker-small">
                     <input type="radio" name="weekday" id="mon">
-                    <label for="mon">Monday</label>
+                    <label for="mon">Mon</label>
 
                     <input type="radio" name="weekday" id="tue">
-                    <label for="tue">Tuesday</label>
+                    <label for="tue">Tue</label>
 
                     <input type="radio" name="weekday" id="wed">
-                    <label for="wed">Wednesday</label>
+                    <label for="wed">Wed</label>
 
 
                     <input type="radio" name="weekday" id="thu">
-                    <label for="thu">Thursday</label>
-
-
+                    <label for="thu">Thu</label>
+                </div>
+                <div class="weekday-picker-small">
                     <input type="radio" name="weekday" id="fri">
-                    <label for="fri">Friday</label>
-
-
+                    <label for="fri">Fri</label>
                     <input type="radio" name="weekday" id="sat">
-                    <label for="sat">Saturday</label>
-
-
+                    <label for="sat">Sat</label>
                     <input type="radio" name="weekday" id="sun">
-                    <label for="sun">Sunday</label>
+                    <label for="sun">Sun</label>
 
                 </div>
+                <h3 class="timepicker-header">Click on input field and enter consultation hours</h3>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="free-day" onchange="checkboxCheking(event)">
                     <label for="free-day">Day off</label>
@@ -102,7 +126,7 @@
                     <p>You choose to take day off. You can't set and add new work times for current day.
                         Uncheck parameter "Day off" to set work time.</p>
                 </div>
-                <p>Click on input field and enter consultation hours</p>
+
                 <div class="time-picker">
                     <div class="input-group bootstrap-timepicker timepicker first-row">
                         <label for="timepicker">From </label>
@@ -114,34 +138,23 @@
                     </div>
                     <div class="more-timepicker"></div>
                     <div class="failure-alert alert">
-                        <p>Save failed. You entered incorrect data. Time shoul be between 8:00AM and 8:00PM</p>
+                        <p>Save failed. You entered incorrect data. Time should be between 8:00AM and 8:00PM</p>
                     </div>
                     <div class="success-alert alert">
                         <p>Your working time saved successfully</p>
                     </div>
                     <div class="control-button">
-                        <button><i class="icon-plus" onclick="insertTimePicker()">Add new time</i></button>
-                        <button><i class="icon-ok" onclick="saveButton()">Save time</i></button>
+                        <button onclick="insertTimePicker()"><i class="icon-plus">Add new time</i></button>
+                        <button onclick="saveButton()"><i class="icon-ok">Save time</i></button>
                     </div>
 
                 </div>
             </div>
         </div>
-
         <div id="night" class="tab-content">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
         </div>
+    </main>
 </div>
-</main>
-<script type="text/javascript">
-    // $('#timepicker').timepicker({
-    //     showMeridian: false
-    // });
-    // $('#timepicker1').timepicker({
-    //     showMeridian: false
-    // });
-</script>
 </div>
 </body>
 </html>

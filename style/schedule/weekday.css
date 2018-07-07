@@ -4,11 +4,13 @@
     margin-top: 15px;
 }
 
-.weekday-picker input[type="radio"] {
+.weekday-picker input[type="radio"],
+.weekday-picker-small input[type='radio']{
     display: none;
 }
 
-.weekday-picker label {
+.weekday-picker label,
+.weekday-picker-small label{
     cursor: pointer;
     display: inline-block;
     padding: 10px 20px;
@@ -17,12 +19,48 @@
     float: left;
     background-color: gainsboro;
     min-width: 14.2%;
+    text-align: center;
 }
-
-.weekday-picker label:hover {
+.weekday-picker-small{
+    display: none;
+}
+.weekday-picker label:hover,
+.weekday-picker-small label:hover{
     background-color: #CCCCFF;
 }
 
 .weekday-picker input[type="radio"]:checked + label{
 background-color: #9999FF;
+}
+
+
+@media screen and (max-width: 800px) {
+    .weekday-picker {
+        display: none;
+    }
+
+    .weekday-picker-small {
+        display: flex;
+        justify-content: stretch;
+        width: 100%;
+    }
+
+    .weekday-picker + .weekday-picker-small label {
+        width: 25%;
+    }
+
+    .weekday-picker + .weekday-picker-small + .weekday-picker-small label {
+        width: 33.3%;
+    }
+
+    .weekday-picker-small input[type="radio"]:checked + label {
+        background-color: #9999FF;
+    }
+
+    .weekday-picker-small label {
+        margin-bottom: 0;
+    }
+    #daytime > h3:first-child{
+        margin-bottom: 15px;
+    }
 }
