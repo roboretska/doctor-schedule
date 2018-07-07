@@ -33,6 +33,10 @@
 background-color: #9999FF;
 }
 
+#daytime > h3:first-child{
+    margin-top: 15px;
+}
+
 
 @media screen and (max-width: 800px) {
     .weekday-picker {
