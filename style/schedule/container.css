@@ -1,0 +1,13 @@
+.schedule-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    padding: 10px;
+    min-height: 80%;
+}
+
+
+.schedule-wrapper h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    line-height: 1.67;
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (min-width: 800px){
+    main{
+        width: 75%;
+        border: 3px groove #ccc;
+        border-radius: 0.5em;
+        margin: .5em 1em;
+        min-height: 95vh;
+        -webkit-box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+        -moz-box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+        box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main{
+        width: 100%;
+    }
+}

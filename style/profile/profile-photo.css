@@ -1,0 +1,22 @@
+.profile-photo{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.profile-photo > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 800px) {
+
+    .profile-photo > img{
+        display: block;
+        margin: 0 auto;
+        max-width: 250px;
+        border-radius: 50%;
+    }
+}

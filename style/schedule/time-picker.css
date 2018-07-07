@@ -1,0 +1,30 @@
+.first-row input{
+    display: inline-block;
+    margin: 15px 5px 10px 10px;
+    min-width: 42%;
+}
+
+.input-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.checkbox-wrapper {
+    display: flex;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-wrapper label{
+    margin-left: 15px;
+}
+
+.first-row input:disabled{
+    cursor:  not-allowed;
+}
+
+input[type= "checkbox"]{
+    height: 25px;
+    width: 25px;
+}

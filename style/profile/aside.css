@@ -1,0 +1,23 @@
+aside{
+    background-color:#000099	 ;
+    color: #ccdfff;
+
+}
+
+
+@media screen and (min-width: 800px){
+    aside{
+        width: 25%;
+        border-radius: 0.6em;
+        margin: .5em  0 .5em 1em;
+        max-width: 400px;
+        -webkit-box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+        -moz-box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+        box-shadow: 15px 15px 16px -9px rgba(23,23,23,1);
+    }
+}
+@media screen and (max-width: 800px) {
+    aside{
+        width: 100%;
+    }
+}

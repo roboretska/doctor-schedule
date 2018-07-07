@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="./icons/css/fontello.css" type="text/css" rel="stylesheet">
+    <script src="./bootstrap-timepicker/js/bootstrap-timepicker.js" rel="script"></script>
+    <link href="./bootstrap-timepicker/css/bootstrap-timepicker.min.css" type="text/css" rel="stylesheet">
+    <link href="style/profile/main.css" type="text/css" rel="stylesheet">
+    <link href="style/profile/grid.css" type="text/css" rel="stylesheet">
+    <link href="style/profile/aside.css" type="text/css" rel="stylesheet">
+    <link href="style/profile/user-profile.css" type="text/css" rel="stylesheet">
+    <link href="style/profile/profile-photo.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/container.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/shift-picker.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/tabs.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/weekday.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/time-picker.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/control-button.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/added-timepicker.css" type="text/css" rel="stylesheet">
+    <link href="style/schedule/alerts.css" type="text/css" rel="stylesheet">
+    <script src="./scripts/tabs.js" rel="script"></script>
+    <script src="./scripts/main.js" rel="script"></script>
+    <script src="./scripts/insert-timepicker.js" rel="script"></script>
+    <script src="./scripts/checkboxCheking.js" rel="script"></script>
+    <script src="./scripts/save.js" rel="script"></script>
+    <title>Schedule</title>
+</head>
+<body>
+<div class="content-wrapper">
+    <aside>
+        <div class="user-profile-wrapper">
+            <div class="profile-photo">
+                <img src="./image/profile.jpg">
+            </div>
+            <div class="user-name">
+                <p>Alice Walker</p>
+            </div>
+            <div class="user-post">
+                Chief of Medicine, vascular surgeon
+            </div>
+            <div class="info-wrapper">
+                <i class="icon-phone"></i>
+                <a href="tel:+44XXXXXXXXXX">+44XXXXXXXXXX</a>
+            </div>
+            <div class="info-wrapper">
+                <i class="icon-mail"></i>
+                <a href="mailto:mail@example.com">mail@example.com</a>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="schedule-wrapper">
+            <h2>Set consultation hours:</h2>
+            <div class="tab">
+                <button id="defaultOpen" class="shift-button" onclick="showTabContext(event, 'daytime')">For daytime
+                </button>
+                <button class="shift-button night-time" onclick="showTabContext(event, 'night')">For night</button>
+            </div>
+            <div id="daytime" class="tab-content">
+                <h3>Choose weekday and consultation hours at daytime(8.00AM - 8.00PM)</h3>
+                <div class="weekday-picker">
+                    <input type="radio" name="weekday" id="mon">
+                    <label for="mon">Monday</label>
+
+                    <input type="radio" name="weekday" id="tue">
+                    <label for="tue">Tuesday</label>
+
+                    <input type="radio" name="weekday" id="wed">
+                    <label for="wed">Wednesday</label>
+
+
+                    <input type="radio" name="weekday" id="thu">
+                    <label for="thu">Thursday</label>
+
+
+                    <input type="radio" name="weekday" id="fri">
+                    <label for="fri">Friday</label>
+
+
+                    <input type="radio" name="weekday" id="sat">
+                    <label for="sat">Saturday</label>
+
+
+                    <input type="radio" name="weekday" id="sun">
+                    <label for="sun">Sunday</label>
+
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="free-day" onchange="checkboxCheking(event)">
+                    <label for="free-day">Day off</label>
+                </div>
+                <div class="disable-alert alert">
+                    <p>You choose to take day off. You can't set and add new work times for current day.
+                        Uncheck parameter "Day off" to set work time.</p>
+                </div>
+                <p>Click on input field and enter consultation hours</p>
+                <div class="time-picker">
+                    <div class="input-group bootstrap-timepicker timepicker first-row">
+                        <label for="timepicker">From </label>
+                        <input id="timepicker" type="text" data-provide="timepicker"
+                                class="form-control input-small">
+                        <label for="timepicker1"> to </label>
+                        <input id="timepicker1" type="text" data-provide="timepicker"
+                               min="8:00" max="20:00"  class="form-control input-small">
+                    </div>
+                    <div class="more-timepicker"></div>
+                    <div class="failure-alert alert">
+                        <p>Save failed. You entered incorrect data. Time shoul be between 8:00AM and 8:00PM</p>
+                    </div>
+                    <div class="success-alert alert">
+                        <p>Your working time saved successfully</p>
+                    </div>
+                    <div class="control-button">
+                        <button><i class="icon-plus" onclick="insertTimePicker()">Add new time</i></button>
+                        <button><i class="icon-ok" onclick="saveButton()">Save time</i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="night" class="tab-content">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+</div>
+</main>
+<script type="text/javascript">
+    // $('#timepicker').timepicker({
+    //     showMeridian: false
+    // });
+    // $('#timepicker1').timepicker({
+    //     showMeridian: false
+    // });
+</script>
+</div>
+</body>
+</html>

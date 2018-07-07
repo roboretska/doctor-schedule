@@ -1,0 +1,71 @@
+.user-profile-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px 30px 30px;
+}
+
+.user-name{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.user-name> p {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.user-post{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 75px;
+}
+
+.info-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.info-wrapper i{
+    margin:0 15px 0 0;
+    font-size: 24px;
+}
+.info-wrapper > a{
+    display: flex;
+    align-self: center;
+    font-size: 14px;
+    color: #ccdfff;
+    text-decoration: none;
+}
+.info-wrapper > a:active{
+    color: #ccdfff;
+    text-decoration: none;
+}
+.info-wrapper > a:visited{
+    color: #ccdfff;
+    text-decoration: none;
+}
+.info-wrapper > a:hover{
+    color: #ccdfff;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 1000px){
+    .info-wrapper i {
+        font-size: 18px;
+    }
+    .info-wrapper > a{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .info-wrapper i {
+        font-size: 30px;
+    }
+    .info-wrapper > a{
+        font-size: 16px;
+    }
+}

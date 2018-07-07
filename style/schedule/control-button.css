@@ -1,0 +1,25 @@
+.control-button > button{
+    background-color: #9999FF;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 50%;
+}
+.control-button {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+.control-button > button:first-child{
+border-right:  5px solid #FFFAFA;
+}
+
+.control-button > button:disabled{
+    background-color: #999999;
+    cursor:  not-allowed;
+}

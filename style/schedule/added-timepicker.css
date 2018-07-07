@@ -1,0 +1,16 @@
+.more-timepicker input{
+    margin: 15px 15px 10px 15px;
+    min-width: 40%;
+}
+
+.more-timepicker button{
+    background-color: transparent;
+    color: #333333;
+    border: none;
+    padding: 0 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
